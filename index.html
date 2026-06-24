@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lotofácil Premium</title>
+</head>
+<body>
+
+<h1>Lotofácil Premium</h1>
+
+<p>Aplicativo gerador de jogos e matrizes.</p>
+
+<button onclick="gerar()">Gerar Jogo</button>
+
+<div id="resultado"></div>
+
+<script>
+function gerar() {
+  let numeros = [];
+
+  while(numeros.length < 15){
+    let n = Math.floor(Math.random()*25)+1;
+
+    if(!numeros.includes(n)){
+      numeros.push(n);
+    }
+  }
+
+  numeros.sort((a,b)=>a-b);
+
+  document.getElementById("resultado").innerHTML =
+    numeros.join(" - ");
+}
+</script>
+
+</body>
+</html>
