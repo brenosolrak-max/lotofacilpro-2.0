@@ -12,28 +12,6 @@
 
 <p>Aplicativo gerador de jogos e matrizes.</p>
 
-<button onclick="gerar()">Gerar Jogo</button>
-
-<div id="resultado"></div>
-
-<script>
-function gerar() {
-  let numeros = [];
-
-  while(numeros.length < 15){
-    let n = Math.floor(Math.random()*25)+1;
-
-    if(!numeros.includes(n)){
-      numeros.push(n);
-    }
-  }
-
-  numeros.sort((a,b)=>a-b);
-
-  document.getElementById("resultado").innerHTML =
-    numeros.join(" - ");
-}
-</script>
 <button onclick="gerarJogo()">Gerar 1 Jogo</button>
 
 <button onclick="gerar5Jogos()">Gerar 5 Jogos</button>
@@ -43,5 +21,6 @@ function gerar() {
 <div id="resultado"></div>
 
 <script src="app.js"></script>
+
 </body>
 </html>
