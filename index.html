@@ -16,24 +16,7 @@
 
 <div id="resultado"></div>
 
-<script>
-function gerar() {
-  let numeros = [];
-
-  while(numeros.length < 15){
-    let n = Math.floor(Math.random()*25)+1;
-
-    if(!numeros.includes(n)){
-      numeros.push(n);
-    }
-  }
-
-  numeros.sort((a,b)=>a-b);
-
-  document.getElementById("resultado").innerHTML =
-    numeros.join(" - ");
-}
-</script>
+<script src="app.js"></script>
 
 </body>
 </html>
