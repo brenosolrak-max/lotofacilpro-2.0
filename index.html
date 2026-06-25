@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lotofácil Premium</title>
-<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -16,7 +15,31 @@
 
 <div id="resultado"></div>
 
-<script src="app.js"></script>
+<script>
+function gerar() {
+  let numeros = [];
 
+  while(numeros.length < 15){
+    let n = Math.floor(Math.random()*25)+1;
+
+    if(!numeros.includes(n)){
+      numeros.push(n);
+    }
+  }
+
+  numeros.sort((a,b)=>a-b);
+
+  document.getElementById("resultado").innerHTML =
+    numeros.join(" - ");
+
+<button onclick="gerarJogo()">Gerar 1 Jogo</button>
+
+<button onclick="gerar5Jogos()">Gerar 5 Jogos</button>
+
+<button onclick="gerarMatriz18()">Matriz 18</button>
+
+<div id="resultado"></div>
+
+<script src="app.js"></script>
 </body>
 </html>
